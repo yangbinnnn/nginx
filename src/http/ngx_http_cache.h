@@ -44,14 +44,14 @@ typedef struct {
                                          - sizeof(ngx_rbtree_key_t)];
 
     unsigned                         count:20;
-    unsigned                         uses:10;
+    unsigned                         uses:14;
     unsigned                         valid_msec:10;
     unsigned                         error:10;
     unsigned                         exists:1;
     unsigned                         updating:1;
     unsigned                         deleting:1;
     unsigned                         purged:1;
-                                     /* 10 unused bits */
+                                     /* 6 unused bits */
 
     ngx_file_uniq_t                  uniq;
     time_t                           expire;
